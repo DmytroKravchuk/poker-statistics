@@ -1,0 +1,60 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier", "react", "jsx-a11y"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true,
+    "commonjs": true,
+    "amd": true
+  },
+  "rules" : {
+    "prettier/prettier": [
+      "error", {
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "all"
+      }
+    ],
+    "linebreak-style": 0,
+    "no-tabs": 0,
+    "jsx-a11y/click-events-have-key-events": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false, "peerDependencies": false}],
+    "func-names": 0,
+    "import/prefer-default-export": "off",
+    "react/no-multi-comp": ["off", { "ignoreStateless": false }]
+  },
+  "globals": {
+    "localStorage": true,
+    "window": true,
+    "document": true,
+    "fetch": true,
+    "require": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["./src/lib/"],
+        "extensions": [
+          ".js",
+          ".mjs",
+          ".json",
+          ".scss",
+          ".less"
+        ]
+      }
+    },
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "16.1"
+    },
+    "propWrapperFunctions": [ "forbidExtraProps" ]
+  }
+}

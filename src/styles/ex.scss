@@ -1,0 +1,6 @@
+.ex {
+  display: block;
+  &:hover {
+    display: none;
+  }
+}
