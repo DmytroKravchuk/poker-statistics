@@ -90,6 +90,8 @@ module.exports = {
         extensions: [ '.jsx', '.js', '.json', '.png' ],
         alias: {
             '@modules': path.resolve( __dirname, 'src/modules' ),
+            '@components': path.resolve( __dirname, 'src/components' ),
+            '@redux': path.resolve( __dirname, 'src/redux' ),
             '@': path.resolve( __dirname, 'src' )
         }
     },
