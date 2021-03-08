@@ -1,0 +1,411 @@
+$BLUE: #005BA8;
+$BLUE_HOVER: #0973CC;
+$TEAL: #7AC1C8;
+$RED: #FF6565;
+$GREEN: #4ECB70;
+$ORANGE: #FF7C46;
+$DARK: #4D4F5C;
+$DARK_GREY: #888;
+$DARK_GREY_LIGHT: #B5B4B4;
+$DARK_GREY_LIGHT_OPACITY: #D1CDCD;
+$DISABLED: #889AAA;
+$BROWN: #CFBAB2;
+$BLUE_and_GREY__LIGHT: #E6ECF2;
+$BROWN_LIGHT: #D8D4D4;
+$GREY: #DBDBDB;
+$GREY_LIGHT: #F3F3F3;
+$GREY_and_WHITE: #FBFBFB;
+$WHITE: #fff;
+$YELLOW: #FFD014;
+$CYAN_BLUE_LIGHT: #A1AEB7;
+$BRONZE: #C07421;
+$GOLD: #D4A900;
+$SILVER: #8C8C8C;
+$PLATINUM: #6E86A5;
+$DIAMOND: #9469A1;
+
+// THIS FILE SHOULD ONLY CONTAIN VARIABLE DEFINITIONS
+
+// Ant Colors & Styles can be overwritten here. Just use the variable names from
+// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+
+// Be sure to use $xyz, not @xyz!
+// Example $primary-color: crimson;
+
+// -------- Colors -----------
+
+//// -------- Colors -----------
+$primary-color: $BLUE;
+$info-color: $BLUE;
+$success-color: $GREEN;
+$processing-color: $BLUE;
+$error-color: $RED;
+$highlight-color: $TEAL;
+$warning-color: $ORANGE;
+$normal-color: #d9d9d9;
+
+// Color used by default to control hover and active backgrounds and for
+// alert info backgrounds.
+$primary-1: $BLUE;
+$primary-2: $BLUE;
+$primary-3: $BLUE;
+$primary-4: $BLUE;
+$primary-5: $BLUE;
+$primary-6: $BLUE;
+$primary-7: $BLUE;
+$primary-8: $BLUE;
+$primary-9: $BLUE;
+$primary-10: $BLUE;
+
+// Buttons
+$btn-default-border: $BLUE;
+
+// TODO use all ant-vars
+
+// Background color for `<body>`
+$body-background: $GREY_LIGHT;
+$component-background: $WHITE;
+
+$font-family-no-number: Roboto;
+$font-family: Roboto;
+
+$heading-color: $DARK;
+$text-color: $DARK;
+$text-color-secondary: $DARK;
+$heading-color-dark: $DARK;
+$text-color-dark: $DARK;
+$text-color-secondary-dark: $DARK;
+
+$font-size-base: 15px;
+$font-size-lg: $font-size-base + 3px;
+$font-size-sm: 13px;
+$line-height-base: 1.5;
+$border-radius-base: 3px;
+$border-radius-sm: 3px;
+
+// vertical paddings
+$padding-lg: 16px; // containers
+$padding-md: 10px; // small containers and buttons
+$padding-sm: 10px; // Form controls and items
+$padding-xs: 8px; // small items
+
+// vertical padding for all form controls
+$control-padding-horizontal: $padding-sm;
+$control-padding-horizontal-sm: $padding-sm;
+
+// The background colors for active and hover states for things like
+// list items or table cells.
+$item-active-bg: $GREY_LIGHT;
+$item-hover-bg: $GREY_LIGHT;
+
+// LINK
+$link-color: $primary-color;
+$link-hover-color: lighten($link-color, 20%);
+$link-active-color: lighten($link-color, 20%);
+$link-decoration: none;
+$link-hover-decoration: none;
+
+// Border color
+$border-color-base: $DARK_GREY_LIGHT_OPACITY; // base border outline a component
+$border-color-split: #eeeeee; // split border inside a component
+$border-color-inverse: $WHITE;
+$border-width-base: 1px; // width of the border for a component
+$border-style-base: solid; // style of a components border
+
+
+// Table
+
+$table-padding-vertical: 16px;
+$table-padding-horizontal: 16px;
+$table-selected-row-color: inherit;
+$table-selected-row-bg: #e6f7ff;
+
+// Outline
+$outline-blur-size: 0;
+$outline-width: 2px;
+$outline-color: $primary-color;
+
+// TODO CHANGE
+//$background-color-light : $WHITE;  // background of header and selected item
+//$background-color-base  : $DISABLED;  // Default grey background color
+
+// Disabled states
+//$disabled-color         : $WHITE;
+//$disabled-bg            : $background-color-base;
+//$disabled-color-dark    : red;
+// TODO CHANGE
+
+// Shadow
+//$shadow-color           : rgba(0, 0, 0, .15);
+//$box-shadow-base        : $shadow-1-down;
+//$shadow-1-up            : 0 2px 8px $shadow-color;
+//$shadow-1-down          : 0 2px 8px $shadow-color;
+//$shadow-1-left          : -2px 0 8px $shadow-color;
+//$shadow-1-right         : 2px 0 8px $shadow-color;
+//$shadow-2               : 0 4px 12px $shadow-color;
+
+// Buttons
+$btn-font-weight: 400;
+$btn-border-radius-base: $border-radius-base;
+$btn-border-radius-sm: $border-radius-base;
+
+$btn-primary-color: $WHITE;
+$btn-primary-bg: $primary-color;
+
+$btn-default-color: $primary-color;
+$btn-default-bg: #fff;
+$btn-default-border: $primary-color;
+
+//@btn-danger-color       : @error-color;
+//@btn-danger-bg          : @background-color-base;
+//@btn-danger-border      : @border-color-base;
+
+$btn-disable-color: $WHITE;
+$btn-disable-bg: $DISABLED;
+$btn-disable-border: $DISABLED;
+
+$btn-padding-base: 0 $padding-md;
+$btn-font-size-lg: $font-size-lg;
+$btn-font-size-sm: $font-size-base;
+$btn-padding-lg: $btn-padding-base;
+$btn-padding-sm: 0 $padding-xs - 1px;
+
+$btn-height-base: 32px;
+$btn-height-lg: 50px;
+$btn-height-sm: 24px;
+
+//.ant-btn {
+//  min-width: 130px;
+//  &-lg {
+//    min-width: 180px;
+//  }
+//  &-sm {
+//    min-width: 130px;
+//  }
+//}
+
+//$btn-circle-size        : $btn-height-base;
+//$btn-circle-size-lg     : $btn-height-lg;
+//$btn-circle-size-sm     : $btn-height-sm;
+
+//@btn-group-border       : @primary-5;
+
+// Checkbox
+$checkbox-size: 20px;
+$checkbox-color: $primary-color;
+$checkbox-check-color: $WHITE;
+
+// Radio
+$radio-size: 18px;
+$radio-dot-color: $primary-color;
+
+// Radio buttons
+$radio-button-bg: $btn-default-bg;
+$radio-button-color: $primary-color;
+$radio-button-hover-color: $primary-5;
+$radio-button-active-color: $primary-7;
+
+// Layout
+//$layout-body-background         : red;
+//$layout-header-background       : red;
+//$layout-footer-background       : $layout-body-background;
+//$layout-header-height           : 64px;
+//$layout-header-padding          : 0 50px;
+//$layout-footer-padding          : 24px 50px;
+//$layout-sider-background        : $layout-header-background;
+//$layout-trigger-height          : 48px;
+//$layout-trigger-background      : #002140;
+//$layout-trigger-color           : #fff;
+//$layout-zero-trigger-width      : 36px;
+//$layout-zero-trigger-height     : 42px;
+//// Layout light theme
+//$layout-sider-background-light  : #fff;
+//$layout-trigger-background-light: #fff;
+//$layout-trigger-color-light     : $text-color;
+
+// Typography
+// ---
+$typography-title-font-weight: 400;
+$typography-title-margin-top: 1.2em;
+$typography-title-margin-bottom: 0.5em;
+
+// Form
+// ---
+//$label-required-color        : $highlight-color;
+//$label-color                 : blue;
+$form-item-margin-bottom: 20px;
+$form-item-trailing-colon: true;
+$form-vertical-label-padding: 0 0 8px;
+$form-vertical-label-margin: 0;
+
+// Input
+// ---
+$input-height-base: 32px;
+$input-height-lg: 40px;
+$input-height-sm: 24px;
+$input-padding-horizontal: $control-padding-horizontal;
+$input-padding-horizontal-base: $input-padding-horizontal;
+$input-padding-horizontal-sm: $control-padding-horizontal-sm;
+$input-padding-horizontal-lg: $input-padding-horizontal;
+$input-padding-vertical-base: 4px;
+$input-padding-vertical-sm: 1px;
+$input-padding-vertical-lg: 6px;
+$input-placeholder-color: $DARK_GREY_LIGHT;
+$input-color: $text-color;
+$input-border-color: $border-color-base;
+$input-bg: $WHITE;
+$input-addon-bg: $GREY_LIGHT;
+$input-hover-border-color: $DARK;
+$input-disabled-bg: $GREY_LIGHT;
+$input-outline-offset: 0 0;
+
+// Tooltip
+// ---
+//* Tooltip max width
+$tooltip-max-width: 250px;
+//** Tooltip text color
+$tooltip-color: $WHITE;
+//** Tooltip background color
+$tooltip-bg: $DARK;
+//** Tooltip arrow width
+$tooltip-arrow-width: 5px;
+//** Tooltip distance with trigger
+$tooltip-distance: $tooltip-arrow-width - 1px + 4px;
+//** Tooltip arrow color
+$tooltip-arrow-color: $DARK;
+
+// Popover
+// ---
+//** Popover body background color
+$popover-bg: $DARK;
+//** Popover text color
+$popover-color: $WHITE;
+//** Popover maximum width
+$popover-min-width: 177px;
+//** Popover arrow width
+$popover-arrow-width: 6px;
+//** Popover arrow color
+$popover-arrow-color: $popover-bg;
+//** Popover outer arrow width
+//** Popover outer arrow color
+$popover-arrow-outer-color: $popover-bg;
+//** Popover distance with trigger
+$popover-distance: $popover-arrow-width + 4px;
+
+// Modal
+// --
+$modal-mask-bg: rgba(0, 0, 0, 0.50);
+
+// Progress
+// --
+$progress-default-color: $primary-color;
+$progress-remaining-color: $GREY_LIGHT;
+
+// Spin
+// ---
+$spin-dot-size-sm: 14px;
+$spin-dot-size: 20px;
+$spin-dot-size-lg: 32px;
+
+// Tag
+// --
+$tag-default-bg: $GREY_LIGHT;
+$tag-default-color: $text-color;
+$tag-font-size: $font-size-sm;
+
+// TimePicker
+// ---
+$time-picker-panel-column-width: 56px;
+$time-picker-panel-width: $time-picker-panel-column-width * 3;
+$time-picker-selected-bg: $GREY_LIGHT;
+
+// Badge
+// ---
+$badge-height: 20px;
+$badge-dot-size: 6px;
+$badge-font-size: $font-size-sm;
+$badge-font-weight: normal;
+$badge-status-size: 6px;
+
+.ant-badge-count {
+  box-shadow: none;
+}
+
+// Tabs
+// ---
+$tabs-card-head-background: $WHITE;
+$tabs-card-height: 40px;
+$tabs-card-active-color: $primary-color;
+$tabs-title-font-size: $font-size-base;
+$tabs-title-font-size-lg: $font-size-lg;
+$tabs-title-font-size-sm: $font-size-base;
+$tabs-ink-bar-color: $primary-color;
+$tabs-bar-margin: 0 0 20px 0;
+$tabs-horizontal-margin: 0;
+$tabs-horizontal-padding: 15px 20px;
+$tabs-vertical-padding: 15px 20px;
+$tabs-vertical-margin: 0;
+$tabs-scrolling-size: 32px;
+$tabs-highlight-color: $primary-color;
+$tabs-hover-color: lighten($link-color, 20%);
+$tabs-active-color: lighten($link-color, 20%);
+.ant-tabs-tab {
+  color: $DARK_GREY_LIGHT;
+}
+
+.as-tabs .ant-tabs-nav-container {
+  padding-left: 30px;
+}
+
+.ant-tabs-nav .ant-tabs-tab {
+  color: $DARK_GREY_LIGHT;
+}
+
+// Pagination
+// ---
+$pagination-item-size: 30px;
+$pagination-item-size-sm: 20px;
+$pagination-font-family: $font-family;
+$pagination-font-weight-active: 500;
+.ant-pagination-item-active {
+  a {
+    color: $WHITE !important;
+  }
+  background-color: $primary-color;
+}
+
+// Slider
+// ---
+//@slider-margin:                       14px 6px 10px;
+//$slider-rail-background-color:        @background-color-base;
+//@slider-rail-background-color-hover:  #e1e1e1;
+//@slider-track-background-color:       @primary-3;
+//@slider-track-background-color-hover: @primary-4;
+//@slider-handle-color:                 @primary-3;
+//@slider-handle-color-hover:           @primary-4;
+//@slider-handle-color-focus:           tint(@primary-color, 20%);
+//@slider-handle-color-focus-shadow:    tint(@primary-color, 50%);
+//@slider-handle-color-tooltip-open:    @primary-color;
+//@slider-dot-border-color:             @border-color-split;
+//@slider-dot-border-color-active:      tint(@primary-color, 50%);
+//@slider-disabled-color:               @disabled-color;
+//@slider-disabled-background-color:    @component-background;
+.ant-slider-handle {
+  background-color: $primary-color
+}
+
+// Descriptions
+$descriptions-bg: #fafafa;
+$descriptions-title-margin-bottom: 20px;
+$descriptions-default-padding: $padding-md $padding-lg;
+$descriptions-middle-padding: $padding-sm $padding-lg;
+$descriptions-small-padding: $padding-xs $padding-md;
+
+// Tree-select
+// ---
+.ant-select-tree li .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
+  background-color: $GREY_LIGHT;
+}
+
+
+$zindex-popover: 1050;

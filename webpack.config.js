@@ -29,9 +29,6 @@ const cssLoaders = extra => {
     const loaders = [
         {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-                publicPath: path.resolve( __dirname, 'dist' )
-            }
         },
         'css-loader',
     ];
@@ -159,4 +156,5 @@ module.exports = {
             }
         ]
     },
+    target: 'web'
 }

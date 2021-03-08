@@ -1,0 +1,8 @@
+{
+  "login_page": {
+    "username_field": "Username",
+    "password_field": "Password",
+    "remember_me_field": "Remember me",
+    "submit": "Submit"
+  }
+}
