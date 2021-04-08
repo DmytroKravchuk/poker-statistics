@@ -1,0 +1,30 @@
+@import "../../styles/colors_palette";
+
+.login-page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  form {
+    width: 70%;
+    padding: 20px;
+    background-color: $WHITE;
+    box-shadow: $box-shadow;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo-img {
+      max-height: 120px;
+    }
+  }
+
+  .ant-form-item {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -136,13 +136,8 @@ $outline-color: $primary-color;
 // TODO CHANGE
 
 // Shadow
-//$shadow-color           : rgba(0, 0, 0, .15);
-//$box-shadow-base        : $shadow-1-down;
-//$shadow-1-up            : 0 2px 8px $shadow-color;
-//$shadow-1-down          : 0 2px 8px $shadow-color;
-//$shadow-1-left          : -2px 0 8px $shadow-color;
-//$shadow-1-right         : 2px 0 8px $shadow-color;
-//$shadow-2               : 0 4px 12px $shadow-color;
+$shadow-color           : rgba(0, 0, 0, .15);
+$box-shadow            : 5px 8px 24px 5px $shadow-color;
 
 // Buttons
 $btn-font-weight: 400;
