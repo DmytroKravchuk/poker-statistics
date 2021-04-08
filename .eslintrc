@@ -10,9 +10,10 @@
     "commonjs": true,
     "amd": true
   },
-  "rules" : {
+  "rules": {
     "prettier/prettier": [
-      "error", {
+      "error",
+      {
         "printWidth": 80,
         "tabWidth": 2,
         "useTabs": false,
@@ -25,7 +26,14 @@
     "no-tabs": 0,
     "jsx-a11y/click-events-have-key-events": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false, "peerDependencies": false}],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ],
     "func-names": 0,
     "import/prefer-default-export": "off",
     "react/no-multi-comp": ["off", { "ignoreStateless": false }]
@@ -41,13 +49,7 @@
     "import/resolver": {
       "node": {
         "paths": ["./src/lib/"],
-        "extensions": [
-          ".js",
-          ".mjs",
-          ".json",
-          ".scss",
-          ".less"
-        ]
+        "extensions": [".js", ".mjs", ".json", ".scss", ".less"]
       }
     },
     "react": {
@@ -55,6 +57,6 @@
       "pragma": "React",
       "version": "16.1"
     },
-    "propWrapperFunctions": [ "forbidExtraProps" ]
+    "propWrapperFunctions": ["forbidExtraProps"]
   }
 }
