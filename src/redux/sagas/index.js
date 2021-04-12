@@ -1,5 +1,4 @@
-import { put, takeEvery, all } from 'redux-saga/effects'
+// import { put, takeEvery, all } from 'redux-saga/effects';
 
-export default function* rootSaga () {
-
-}
+// eslint-disable-next-line no-empty-function
+export default function* rootSaga() {}
