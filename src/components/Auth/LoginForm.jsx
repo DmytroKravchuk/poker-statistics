@@ -16,8 +16,6 @@ const LoginForm = ({ locale, layout, tailLayout, setAuthType }) => {
   };
 
   const googleSuccess = (res) => {
-    const data = res?.profileObj;
-    const token = res?.tokenId;
     dispatch(auth(res));
   };
 
