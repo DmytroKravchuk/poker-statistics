@@ -1,4 +1,10 @@
-// import { put, takeEvery, all } from 'redux-saga/effects';
+import { takeEvery, delay } from 'redux-saga/effects';
+import * as TYPES from '../constants';
 
-// eslint-disable-next-line no-empty-function
-export default function* rootSaga() {}
+function* handleAuth() {
+  yield delay(5000);
+}
+
+export default function* rootSaga() {
+  yield takeEvery([TYPES.AUTH], handleAuth);
+}

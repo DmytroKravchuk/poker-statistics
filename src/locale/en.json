@@ -1,12 +1,19 @@
 {
   "login_page": {
     "username_field": "Username",
+    "email_field": "Email",
     "password_field": "Password",
+    "repeat_password_field": "Repeat Password",
     "remember_me_field": "Remember me",
-    "submit": "Submit",
+    "sign_in": "Sign In",
+    "sign_up": "Sign Up",
+    "google_sign_in": "Google Sign In",
+    "register_message": "Don't have an account?",
     "required_messages": {
       "login": "Please input your username!",
-      "password": "Please input your password!"
+      "email": "Please input correct email!",
+      "password": "Please input your password!",
+      "repeat_password": "Please repeat your password!"
     }
   }
 }
