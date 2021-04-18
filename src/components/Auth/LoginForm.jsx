@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { Button, Checkbox, Form, Input } from 'antd';
 import { GoogleOutlined } from '@ant-design/icons';
 import { GoogleLogin } from 'react-google-login';
@@ -7,6 +8,8 @@ import { auth } from '@redux/actions';
 
 const LoginForm = ({ locale, layout, tailLayout, setAuthType }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
+
   const onFinish = (values) => {
     console.log('Success:', values);
   };
@@ -16,7 +19,12 @@ const LoginForm = ({ locale, layout, tailLayout, setAuthType }) => {
   };
 
   const googleSuccess = (res) => {
-    dispatch(auth(res));
+    try {
+      dispatch(auth(res));
+      history.push('/');
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const googleFailure = (err) => {

@@ -72,12 +72,14 @@ module.exports = {
   },
   output: {
     filename: filename('js'),
+    publicPath: '/',
     path: path.resolve(__dirname, 'dist'),
   },
   optimization: optimization(),
   devtool: isDev ? 'source-map' : false,
   devServer: {
     port: 4200,
+    historyApiFallback: true,
     hot: isDev,
   },
   resolve: {
