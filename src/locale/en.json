@@ -15,5 +15,8 @@
       "password": "Please input your password!",
       "repeat_password": "Please repeat your password!"
     }
+  },
+  "navbar": {
+    "logout": "Logout"
   }
 }

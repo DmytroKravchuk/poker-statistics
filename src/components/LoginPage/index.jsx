@@ -7,7 +7,7 @@ const LoginPage = () => {
   const locale = useSelector((state) => state.localeReducer.locale.login_page);
 
   return (
-    <div className="auth-page">
+    <div className="auth-page page">
       <Auth locale={locale} />
     </div>
   );
