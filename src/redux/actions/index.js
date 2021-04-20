@@ -15,3 +15,17 @@ export const logOut = () => {
     type: TYPES.LOGOUT,
   };
 };
+
+export const signIn = (payload) => {
+  return {
+    type: TYPES.SIGN_IN,
+    payload,
+  };
+};
+
+export const signUp = (payload) => {
+  return {
+    type: TYPES.SIGN_UP,
+    payload,
+  };
+};

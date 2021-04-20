@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Button, Checkbox, Form, Input } from 'antd';
 import { GoogleOutlined } from '@ant-design/icons';
 import { GoogleLogin } from 'react-google-login';
-import { auth } from '@redux/actions';
+import { auth, signIn, signUp } from '@redux/actions';
 
 const LoginForm = ({ locale, layout, tailLayout }) => {
   const dispatch = useDispatch();
@@ -12,6 +12,11 @@ const LoginForm = ({ locale, layout, tailLayout }) => {
   const [authType, setAuthType] = useState('login');
 
   const onFinish = (values) => {
+    if (authType === 'login') {
+      dispatch(signIn({ values, history }));
+    } else {
+      dispatch(signUp({ values, history }));
+    }
     console.log('Success:', values);
   };
 
@@ -85,7 +90,7 @@ const LoginForm = ({ locale, layout, tailLayout }) => {
       {authType === 'register' && (
         <Form.Item
           label={locale.repeat_password_field}
-          name="password"
+          name="repeat-password"
           rules={[
             {
               required: true,
