@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = 3000;
 
+app.use('/user', userRoutes);
+
 async function start() {
   try {
     await mongoose.connect(

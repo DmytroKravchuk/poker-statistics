@@ -101,11 +101,6 @@ const LoginForm = ({ locale, layout, tailLayout }) => {
           <Input.Password />
         </Form.Item>
       )}
-      {authType === 'login' && (
-        <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-          <Checkbox>{locale.remember_me_field}</Checkbox>
-        </Form.Item>
-      )}
       <Form.Item {...tailLayout}>
         <Button type="primary" htmlType="submit">
           {locale.sign_in}
