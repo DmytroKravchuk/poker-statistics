@@ -4,7 +4,7 @@
   "description": "poker statistics",
   "private": true,
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack serve --mode development --open",
+    "start": "cross-env NODE_ENV=development webpack serve --mode development --open --hot --history-api-fallback",
     "dev": "cross-env NODE_ENV=development webpack --mode development --watch",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "server": "nodemon backend/index.js"
@@ -63,6 +63,7 @@
     "react-dom": "^17.0.1",
     "react-google-login": "^5.2.2",
     "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.9",
     "redux-saga": "^1.1.3"

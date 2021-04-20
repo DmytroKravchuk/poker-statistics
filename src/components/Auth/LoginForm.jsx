@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { Button, Checkbox, Form, Input } from 'antd';
 import { GoogleOutlined } from '@ant-design/icons';
 import { GoogleLogin } from 'react-google-login';
 import { auth } from '@redux/actions';
 
-const LoginForm = ({ locale, layout, tailLayout, setAuthType }) => {
+const LoginForm = ({ locale, layout, tailLayout }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
+  const [authType, setAuthType] = useState('login');
+
   const onFinish = (values) => {
     console.log('Success:', values);
   };
@@ -16,18 +20,17 @@ const LoginForm = ({ locale, layout, tailLayout, setAuthType }) => {
   };
 
   const googleSuccess = (res) => {
-    const data = res?.profileObj;
-    const token = res?.tokenId;
-    dispatch(auth(res));
+    try {
+      dispatch(auth(res));
+      history.push('/');
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const googleFailure = (err) => {
     console.log('Google Sign in is failed');
     console.log(err);
-  };
-
-  const handleSubmit = () => {
-    console.log(2222);
   };
 
   return (
@@ -52,6 +55,21 @@ const LoginForm = ({ locale, layout, tailLayout, setAuthType }) => {
       >
         <Input />
       </Form.Item>
+      {authType === 'register' && (
+        <Form.Item
+          label={locale.email_field}
+          name="email"
+          rules={[
+            {
+              required: true,
+              type: 'email',
+              message: locale.required_messages.email,
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+      )}
       <Form.Item
         label={locale.password_field}
         name="password"
@@ -64,15 +82,27 @@ const LoginForm = ({ locale, layout, tailLayout, setAuthType }) => {
       >
         <Input.Password />
       </Form.Item>
-      <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-        <Checkbox>{locale.remember_me_field}</Checkbox>
-      </Form.Item>
-      <Form.Item {...tailLayout}>
-        <Button
-          type="primary"
-          htmlType="submit"
-          onSubmit={() => handleSubmit()}
+      {authType === 'register' && (
+        <Form.Item
+          label={locale.repeat_password_field}
+          name="password"
+          rules={[
+            {
+              required: true,
+              message: locale.required_messages.password,
+            },
+          ]}
         >
+          <Input.Password />
+        </Form.Item>
+      )}
+      {authType === 'login' && (
+        <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+          <Checkbox>{locale.remember_me_field}</Checkbox>
+        </Form.Item>
+      )}
+      <Form.Item {...tailLayout}>
+        <Button type="primary" htmlType="submit">
           {locale.sign_in}
         </Button>
       </Form.Item>
@@ -94,12 +124,19 @@ const LoginForm = ({ locale, layout, tailLayout, setAuthType }) => {
         onFailure={googleFailure}
         cookiePolicy="single_host_origin"
       />
-      <p className="bottom-message">
-        {locale.register_message}{' '}
-        <Button onClick={() => setAuthType('register')}>
-          {locale.sign_up}
-        </Button>
-      </p>
+      {authType === 'login' ? (
+        <p className="bottom-message">
+          {locale.login_message}{' '}
+          <Button onClick={() => setAuthType('register')}>
+            {locale.sign_up}
+          </Button>
+        </p>
+      ) : (
+        <p className="bottom-message">
+          {locale.register_message}{' '}
+          <Button onClick={() => setAuthType('login')}>{locale.sign_in}</Button>
+        </p>
+      )}
     </Form>
   );
 };
