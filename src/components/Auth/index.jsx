@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import LoginForm from '@components/Auth/LoginForm';
-import RegisterForm from '@components/Auth/RegisterForm';
 import Logo from '@/assets/img/logo.jpg';
 import './index.scss';
 
 const Auth = ({ locale }) => {
-  const [authType, setAuthType] = useState('login');
-
   const layout = {
     layout: 'vertical',
     labelCol: {
@@ -28,22 +25,7 @@ const Auth = ({ locale }) => {
       <div className="logo">
         <img src={Logo} alt="logo" className="logo-img" />
       </div>
-      {authType === 'login' && (
-        <LoginForm
-          locale={locale}
-          layout={layout}
-          tailLayout={tailLayout}
-          setAuthType={setAuthType}
-        />
-      )}
-      {authType === 'register' && (
-        <RegisterForm
-          locale={locale}
-          layout={layout}
-          tailLayout={tailLayout}
-          setAuthType={setAuthType}
-        />
-      )}
+      <LoginForm locale={locale} layout={layout} tailLayout={tailLayout} />
     </div>
   );
 };
